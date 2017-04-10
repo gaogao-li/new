@@ -1,0 +1,20 @@
+<script type="text/javascript">
+  debugger;
+  var f = function(x,y) {
+    var y =x+2
+    if (x<=2) {
+      return false
+    }
+    for (var i = 2; i < x; i++) {
+      if (x%i==0 || y%i==0) {
+        return false
+      }
+    }
+    return true
+  }
+  for (var j=1; j <=10000; j++) {
+    if (f(j,j+2)) {
+      console.log(j,j+2)
+    }
+  }
+</script>

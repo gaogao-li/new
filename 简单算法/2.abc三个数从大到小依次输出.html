@@ -1,0 +1,22 @@
+<script>
+  var a = +prompt("输入数字") 
+  var b = +prompt("输入数字")
+  var c = +prompt("输入数字")
+  var d
+  if (c>b) {
+    d = c
+    c = b
+    b = d
+  }
+  if (a<c){
+    d = a
+    a = b
+    b = c
+    c = d
+  }else if (a<b) {
+    d = a
+    a = b
+    b = a
+  }
+  console.log(a,b,c)
+</script>

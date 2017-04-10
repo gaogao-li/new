@@ -1,0 +1,53 @@
+<script type="text/javascript">
+  function quicksort(array){
+    if(array.length<=1){
+      return array
+    }
+    var rand = array[parseInt(Math.random()*array.length)]
+    var left =[]
+    var right=[rand]
+    for(var i=0;i<array.length;i++){
+      if(array[i]<rand){
+        left.push(array[i])
+      }else if(array[i]>rand){
+        right.push(array[i])
+      }
+    }
+    return [].concat(quicksort(left),quicksort(right))
+  }
+
+  function quicksort2 (array,start,end){
+    debugger
+    if(start===undefined){
+      start=0
+    }
+    if(end===undefined){
+      end=array.length-1
+    }
+    if(end-start<1){
+      return
+    }
+    var chossed=array[parseInt((start+end)/2)]
+    var left = start 
+    var right = end
+    var temp
+    while(true){
+      while(array[left]<chossed && left < right){
+        left++
+      }
+      while(array[right]>=chossed && left < right){
+        right--
+      }
+      if(left==right){
+        break
+      }
+      temp = array[left]
+      array[left]=array[right]
+      array[right]=temp
+    }
+    quicksort2 (array,start,left-1)
+    quicksort2 (array,left+1,end)
+    return array
+  }
+</script>
+

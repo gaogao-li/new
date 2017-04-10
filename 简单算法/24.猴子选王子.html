@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    debugger;
+    var n = +prompt("猴子总数")
+    var m = +prompt("猴子报数剔除")
+    var king = n 
+    var monkey = new Array(n)
+    for (var i =0;i<monkey.length;i++){
+      monkey[i] = true
+    }
+    var baoshu = 0
+    for (var j =0;;j++){
+      var mkContent = j%n
+      if(monkey[mkContent]==true){
+      baoshu++
+      }
+      if (baoshu==m){
+        monkey[mkContent] = false   
+        baoshu=0
+        king--
+        if(king==1){
+          break;
+        }
+      }
+    }
+    for (var k=0;k<monkey.length;k++){
+      if(monkey[k]==true){
+        console.log(k+1)
+      }
+    }
+</script>

@@ -1,0 +1,24 @@
+<script type="text/javascript">
+function sort (array){
+  debugger
+  var temp
+  var newty 
+  for(var i =0;i<array.length-1;i++){
+    newty=false
+    for(var j=0;j<array.length-i-1;j++){
+      var left = j
+      var right = j+1
+      if(array[left]>array[right]){                        
+        temp = array[left]
+        array[left]=array[right]
+        array[right]=temp
+        newty = true
+      }
+    }
+    if(newty==false){
+      return array
+    }
+  }
+  return array
+}
+</script>

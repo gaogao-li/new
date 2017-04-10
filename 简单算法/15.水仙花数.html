@@ -1,0 +1,23 @@
+<script>
+  debugger;
+  var a =function(x) {
+    return x.toString().length
+  }
+  for(var i=100;i<=100000;i++){
+    var wei=a(i)
+    sum=0
+    var c=i
+    for(var j=1;j<=wei;j++){
+      var q=c%10
+      s=1
+      for(var k=1;k<=wei;k++){
+        s*=q
+      }
+      sum+=s
+      c=parseInt(c/10)
+    }
+    if(sum==i){
+      console.log(i)
+    }
+  }
+</script>

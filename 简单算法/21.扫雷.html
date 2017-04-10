@@ -1,0 +1,51 @@
+<table border="1">
+<script type="text/javascript">
+debugger;
+  var a =[
+    ['*', '*', '?', '?'],
+    ['?', '?', '?', '*'],
+    ['?', '*', '*', '?'],
+    ['?', '?', '*', '?'],
+    ['?', '*', '?', '*']
+  ]
+  var lei 
+  for(var i=0;i<a.length;i++){
+    console.log(a[i])
+    document.write('<tr>')
+    for(var j=0;j<a[i].length;j++){
+      lei =0
+      if(a[i][j]=='?'){
+        if((a[i-1]!=undefined) && (a[i-1][j-1]=='*')){
+          lei++
+        }
+        if((a[i-1]!=undefined) && (a[i-1][j]=='*')){
+          lei++
+        }
+        if((a[i-1]!=undefined) && (a[i-1][j+1]=='*')){
+          lei++
+        }
+        if((a[i]!=undefined) && (a[i][j-1]=='*')){
+          lei++
+        }
+        if((a[i]!=undefined) && (a[i][j+1]=='*')){
+          lei++
+        }
+        if((a[i+1]!=undefined) && (a[i+1][j-1]=='*')){
+          lei++
+        }
+        if((a[i+1]!=undefined) && (a[i+1][j]=='*')){
+          lei++
+        }        
+        if((a[i+1]!=undefined) && (a[i+1][j+1]=='*')){
+          lei++
+        } 
+      }
+      if (a[i][j] != '*') {
+        a[i][j] = lei
+      }
+      document.write('<td>'+a[i][j]+'</td>')
+    }
+    document.write('</tr>')
+  }
+</script>
+</table>

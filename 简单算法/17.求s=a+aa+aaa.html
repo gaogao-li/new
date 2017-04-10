@@ -1,0 +1,16 @@
+<script type="text/javascript">
+  debugger;
+  var a = +prompt("输入小于10且大于0的整数")
+  var n = +prompt("输入相加数次数")
+  var sum = a
+  var q = a
+  var f = function(){
+      for(var j =1;j<n;j++){
+        q=q*10+a
+        sum +=q
+      }
+    return sum
+  }
+  console.log(f())
+
+</script>

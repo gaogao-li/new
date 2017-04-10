@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		html,body {
+			width: 100%;
+			height: 100%;
+		}
+		body * {
+			margin: 0;
+			padding: 0;
+		}
+		@keyframes example {
+			from {
+				margin-top: 100px;
+				color: red;
+			}
+			25% {
+				margin-top:60px;
+				color:green;	
+			}
+			50% {
+                margin-top:100px;
+				color:pink;
+			}
+			75% {
+				margin-top:75px;
+				color:yellow;
+			}
+			to {
+				margin-top:100px;
+				color:blue;	
+			}
+		}
+		.one {
+			width:100%;
+			text-align: center;
+			font-size: 30px;
+			margin-top: 100px;
+			position: absolute;
+			animation:example 1S steps(5) 1;
+		}
+		.two {
+			width:100%;
+			text-align: center;
+			font-size: 30px;
+			margin-top: 200px;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div class="one">☺江湖险恶,不行就撤☺</div>
+	<div class="two">☺江湖险恶,不行就撤☺</div>
+</body>
+</html>

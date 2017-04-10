@@ -1,0 +1,8 @@
+<script type="text/javascript">
+  function bit1InNumber(n){
+    if(n==0){
+      return 0
+    }
+    return 1+bit1InNumber(n - Math.pow(2, parseInt(Math.log2(n))))
+  }
+</script>

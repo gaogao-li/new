@@ -1,0 +1,21 @@
+<script type="text/javascript">
+  function selectSort(array){
+    debugger;
+    var minth
+    var temp 
+    for (var i=0;i<array.length-1;i++){
+      minth=i
+      for(var j=i+1;j<array.length;j++){
+        if(array[j]<array[minth]){
+          minth=j
+        }
+      }
+      if(i!=minth){
+        temp=array[i]
+        array[i]=array[minth]
+        array[minth]=temp
+      }
+    }
+    return array
+  }
+</script>

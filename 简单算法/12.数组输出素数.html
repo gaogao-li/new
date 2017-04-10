@@ -1,0 +1,18 @@
+<script type="text/javascript">
+  debugger;
+  var a = [2]
+  var mvp
+  for(var i = 3;i<100;i+=2){
+    mvp = true
+    for(var j=0;j<a.length;j++){
+      if(i%a[j]==0){
+        mvp = false
+        break
+      }
+    }
+    if (mvp==true) {
+      a.push(i)
+    }
+  }
+  console.log(a)
+</script>

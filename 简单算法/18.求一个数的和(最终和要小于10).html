@@ -1,0 +1,21 @@
+<script type="text/javascript">
+  debugger;
+  var n = +prompt("输入一个大于10的数字吧")
+  var m = n.toString().length
+  var q = n
+  function f(){
+    var sum=0
+    while((sum>=10)||(sum===0)){
+    var sum=0
+    for(var j=1;j<=m;j++){
+        var p = q%10
+        sum +=p
+        q = parseInt(q/10)
+    }
+    q=sum
+    m = q.toString().length
+  }
+  alert(sum)
+  }
+  console.log(f())
+</script>

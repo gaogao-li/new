@@ -1,0 +1,19 @@
+<script type="text/javascript">
+  debugger;
+  var a = prompt("输入数字")
+  var b = []
+  var arr = a.split("")
+  var i = arr.length
+  var isPalindromeNumber = function(){
+    for (var j=0;j<i;j++){
+      b[j]=arr[i-1-j]
+    }
+    return b
+  }
+  isPalindromeNumber()
+  if((arr.toString())==(b.toString())){
+    alert("回文数字")
+  }else{
+    alert("不是回文数字")
+  }
+</script>

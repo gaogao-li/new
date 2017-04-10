@@ -1,0 +1,17 @@
+<script type="text/javascript">
+  var tag=document.getElementsByTagName('p')[0]
+  var lastDblClickTime=0
+  tag.ondblclick=function(){
+    console.log(2)
+    lastDblClickTime=Date.now()
+  }
+  tag.onclick=function(){
+    console.log(1)
+    if(Date.now()-lastDblClickTime<200ms){
+      this.ontripleclick()
+    }
+  }
+  tag.ontripleclick=function(){
+    console.log(3)
+  }
+</script>

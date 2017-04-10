@@ -1,0 +1,15 @@
+<script>
+var m = +prompt("来个数")
+var n = +prompt("再来个数")
+var p = 0
+while (parseInt(m)!=m || parseInt(n)!=n) {
+  m *=10
+  n *=10
+  p++
+}
+var q = m-n
+for(var i=1;i<=p;i++){
+  q = q/10
+}
+alert(q)
+</script>

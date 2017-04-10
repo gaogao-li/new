@@ -1,0 +1,39 @@
+<script type="text/javascript">
+  debugger;
+  function f (char) {
+    var lowerchar = char.toLowerCase()
+    if(lowerchar <= "c"){
+      return 2
+    }
+    if(lowerchar <= "f"){
+      return 3
+    }
+    if(lowerchar <= "i"){
+      return 4
+    }
+    if(lowerchar <= "l"){
+      return 5
+    }
+    if(lowerchar <= "o"){
+      return 6
+    }
+    if(lowerchar <= "s"){
+      return 7
+    }
+    if(lowerchar <= "v"){
+      return 8
+    }
+    if(lowerchar <= "z"){
+      return 9
+    }
+  }
+  function f1 (str) {
+    var result = ''
+    for(var i = 0; i<str.length; i++) {
+      result += f(str[i])
+    }
+    return result
+  }
+  console.log(f1('dell'))
+  console.log(f1('alienware'))
+</script>
